@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!--<link href="css/bootstrap-theme.css" rel="stylesheet">-->
+  <link href="css/theme.css" rel="stylesheet">
+  <link href="css/shame.css" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+  body {
+    background: #999;
+  }
+    .container {
+      display: flex;
+      height: 100%;
+    }
+    .container a {
+      margin: auto;
+    }
+    .container form h1 {
+      color: #f1f1f1;
+    }
+    .container form {
+      margin: auto;
+    }
+    .container form label {
+      color: #f3f3f3;
+    }
+    .container form button {
+      float: right;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- <a href="name.php?firstname=Errol&amp;lastname=Silver" class="btn btn-danger col-xs-12">Hello! I am Errol.</a> -->
+
+    <form action="name.php" method="post">
+    <h1>Word</h1>
+      <label for="firstname">First Name:</label>
+      <input type="text" name="firstname" id="firstname">
+      <br>
+      <label for="lastname">Last Name:</label>
+      <input type="text" name="lastname" id="lastname">
+      <br>
+      <button type="submit" value="submit" class="btn btn-danger col-xs-12">Submit</button>
+    </form>
+
+  </div> <!-- /container -->
+
+  <script src="js/jquery.1.10.2.min.js"></script> <!-- compiled without jquery animate -->
+  <script src="js/jquery.velocity.min.js"></script> <!-- jquery animate replacement -->
+  <script src="js/bootstrap.js"></script>
+  <script src="js/rem.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
