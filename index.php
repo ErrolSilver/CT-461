@@ -1,5 +1,7 @@
 <? include 'incls/header.php' ?>
-  <h1>Lol</h1>
+  <a href="/connect" class="btn btn-danger col-xs-12 col-md-2">
+    <h1>Connect</h1>
+  </a>
   <?
 
   ?>
