@@ -1,0 +1,39 @@
+body {
+  background: #999;
+  opacity: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.container h1 {
+  color: #f1f1f1;
+  margin: auto;
+}
+.container a {
+  margin: auto;
+}
+.container form {
+  margin: auto;
+}
+.container form label {
+  color: #f3f3f3;
+}
+.container form button {
+  float: right;
+  margin-top: 1em;
+}
+
+.container ul {
+  color: #f2f2f2;
+  font-size: 2em;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.container a:first-child {
+  margin: 0;
+}

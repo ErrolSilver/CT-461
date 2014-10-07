@@ -10,6 +10,20 @@
     exit();
   }
 
-  $output = 'Database connection made.';
-  include 'output.html.php';
+  try {
+    $sql = 'SELECT joketext FROM joke WHERE joketext LIKE "%chicken%"'; 
+    $result = $pdo->query($sql);
+  } catch (PDOException $e) {
+    $error = 'Error retreiving joke: ' . $e->getMessage();
+    include 'error.html.php';
+    exit();
+  }
+
+  while ($row = $result->fetch()) {
+    $jokes[] = $row['joketext'];
+  }
+  include 'jokes.html.php';
+
+  //$output = 'Database connection made.';
+  //include 'output.html.php';
 ?>
