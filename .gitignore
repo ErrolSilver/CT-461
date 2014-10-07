@@ -1,4 +1,4 @@
-/.sass-cache
-/node_modules
-/config
-/css
+.sass-cache
+node_modules
+config
+.DS_store
