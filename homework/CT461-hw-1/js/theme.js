@@ -6,30 +6,62 @@
       $pageHead = $('#main-header').find('h1'),
       $mainSection = $('#main-content'),
       $pageContent = $('#main-content').find('.container'),
+      $listToInput = $('#update').find('li'),
+      $deleteBox = $('#main-content').find('.check-box'),
       $footer = $('#main-footer'),
       $form = $('#toSend'),
       $formText = $('#formText'),
       $prepForm = $('#prep'),
-      $contentSubmit = [];
+      $completeDate = $('#completeDate'),
+      $taskSubmit = [],
+      $dateSubmit = [];
 
       $prepForm.on('click', function() {
 
-        // Grabs text inserted by Angular
-        var $textValues = $('#confirm').find('span');
+        // Grabs text inserted through Angular
+        var $taskValues = $('#confirm').find('p'),
+          $taskComplete = $('#confirm').find('span');
+        console.log($taskValues.length);
+        console.log($taskComplete.length);
 
         // Pushes text into array as a string
-        $textValues.each(function () {
-          $contentSubmit.push($(this).text());
+        $taskValues.each(function () {
+          $taskSubmit.push($(this).text() + ',');
+        });
+
+        $taskComplete.each(function () {
+          $dateSubmit.push($(this).text() + '-');
         });
 
         // Passes string into textarea and submits
-        $(formText).val($contentSubmit);
+        $(formText).val($taskSubmit);
+        $completeDate.val($dateSubmit);
         setTimeout(function () {
+          console.log($taskSubmit.length);
+          console.log($taskComplete.length);
           $form.submit();
         },500);
       });
 
 
+      // Delete from DB styles
+      $deleteBox.on('click', function() {
+        $(this).toggleClass('checked');
+      });
+
+/*
+      // DB list modification function
+      $listToInput.on('dblclick', function() {
+        $(this).find('p').hide();
+        $(this).append('<input type="text" name="update" class="update" id="update-text" />');
+        $('#update-text').focus();
+      });
+
+      $('#update').focusout(function() {
+        $('#update-text').parent('form').submit();
+        $('#update-text').hide();
+      });
+*/
 
   // Animation stuff
 
@@ -41,7 +73,7 @@
     setTimeout(function () {
       $body.removeClass('loading');
       $pageLoader.remove();
-    }, 1000);
+    }, 500);
 
     $pageHead.velocity('transition.slideUpBigIn', 3000);
     fadeIn($mainSection, 1500, 500);
@@ -59,10 +91,35 @@
 })(jQuery);
 
 // Angular stuff
-function TodoCtrl($scope) {
 
-  // Definites todo array
+// Dependencies : 
+angular.module('task-picker', ['ui.bootstrap']);
+
+// primary app directive :  
+angular.module('task-picker').controller('TodoCtrl', function ($scope) {
+
   $scope.todos = [];
+
+  $scope.today = function() {
+    $scope.dt = new Date();
+  };
+  $scope.today();
+
+  $scope.clear = function () {
+
+    // Empties datepicker input
+    // $scope.dt = null;
+
+    // Empties todo array
+    $scope.todos = [];
+  };
+
+  $scope.open = function($event) {
+
+    // Opens date picker
+    $event.stopPropagation();
+    $scope.opened = true;
+  };
 
   $scope.getTotalTodos = function () {
 
@@ -73,13 +130,9 @@ function TodoCtrl($scope) {
   $scope.addTodo = function () {
 
     // Stores text input into todo array
-    $scope.todos.push({text:$scope.formTodoText, done:false});
+    $scope.todos.push({text:$scope.formTodoText, date:$scope.dt, done:false});
+
+    // Resets input form
     $scope.formTodoText = '';
   };
-  
-  $scope.clear = function () {
-
-    // Empties todo array
-    $scope.todos = [];
-  };
-}
+});

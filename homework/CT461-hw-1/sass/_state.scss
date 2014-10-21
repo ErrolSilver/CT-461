@@ -1,13 +1,17 @@
 //State styles
-
+.primary_content .btn.submit {
+  position: static;
+}
 /* Small **********************************************************/
 @media screen and (min-width: $break-small) {
-
+  .primary_content .btn.submit {
+    position: absolute;
+  }
 }
 
 /* Medium *********************************************************/
 @media screen and (min-width: $break-medium) {
-
+  
 }
 
 /* Large **********************************************************/

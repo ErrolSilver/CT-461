@@ -8,7 +8,7 @@
         </div>
       </footer>  
     </div> <!-- /wrapper -->
-    <script src="js/angular.min.js"></script>
+    
     <script src="js/jquery.1.10.2.min.js"></script> <!-- compiled without $animate -->
     <script src="js/jquery.velocity.min.js"></script> <!-- $animate replacement -->
     <script src="js/velocity.ui.min.js"></script>

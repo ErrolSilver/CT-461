@@ -146,25 +146,89 @@ p {
           animation: pulse 2s infinite alternate;
   background: url("../img/egg_shell.png") top left repeat;
   margin-bottom: 21.6rem;
+  min-height: 66rem;
   overflow: hidden;
   padding-bottom: 2rem;
 }
-/* line 48, ../sass/_modules.scss */
-.primary_content .btn {
+/* line 50, ../sass/_modules.scss */
+.primary_content .calender-wrap span {
+  display: table-cell;
+}
+/* line 53, ../sass/_modules.scss */
+.primary_content .calender-wrap + .btn {
+  min-width: 107px;
+}
+/* line 57, ../sass/_modules.scss */
+.primary_content .btn.submit {
   bottom: 0;
   font-weight: bold;
   margin-bottom: 1em;
   position: absolute;
   right: 15px;
 }
-/* line 55, ../sass/_modules.scss */
+/* line 64, ../sass/_modules.scss */
 .primary_content .section {
-  min-height: 21rem;
+  min-height: 30rem;
   position: relative;
   padding-bottom: 65px;
 }
+/* line 68, ../sass/_modules.scss */
+.primary_content .section p {
+  margin: 0;
+}
+/* line 72, ../sass/_modules.scss */
+.primary_content span {
+  display: block;
+}
+/* line 75, ../sass/_modules.scss */
+.primary_content .task-date {
+  color: teal;
+  text-align: left;
+}
+/* line 79, ../sass/_modules.scss */
+.primary_content .check-box {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 2px solid black;
+  display: inline-block;
+  height: 20px;
+  margin: 5px;
+  padding: 0;
+  position: absolute;
+  -webkit-transition: all ease-in-out 0.2s;
+          transition: all ease-in-out 0.2s;
+  width: 20px;
+}
+/* line 89, ../sass/_modules.scss */
+.primary_content .check-box:hover {
+  border-color: red;
+}
+/* line 92, ../sass/_modules.scss */
+.primary_content .check-box i {
+  color: red;
+  font-size: 1.5em;
+  opacity: 0;
+  top: -1rem;
+  -webkit-transition: opacity ease-in-out 0.2s;
+          transition: opacity ease-in-out 0.2s;
+}
+/* line 101, ../sass/_modules.scss */
+.primary_content .check-box.checked i {
+  opacity: 1;
+}
+/* line 106, ../sass/_modules.scss */
+.primary_content .update ul {
+  list-style-type: none;
+  padding: 0;
+}
+/* line 111, ../sass/_modules.scss */
+.primary_content .update li p {
+  font-size: 2.1rem;
+  padding-left: 35px;
+  padding-top: 1px;
+}
 
-/* line 62, ../sass/_modules.scss */
+/* line 120, ../sass/_modules.scss */
 .primary_footer {
   background: #000;
   background: rgba(0, 0, 0, 0.6);
@@ -172,11 +236,11 @@ p {
   width: 100%;
   z-index: 1;
 }
-/* line 68, ../sass/_modules.scss */
+/* line 126, ../sass/_modules.scss */
 .primary_footer .container {
   height: 100%;
 }
-/* line 71, ../sass/_modules.scss */
+/* line 129, ../sass/_modules.scss */
 .primary_footer p {
   color: #fff;
   display: inline-block;
@@ -185,12 +249,12 @@ p {
   margin: 0;
 }
 
-/* line 79, ../sass/_modules.scss */
+/* line 137, ../sass/_modules.scss */
 .primary_footer[style] {
   display: block !important;
 }
 
-/* line 84, ../sass/_modules.scss */
+/* line 142, ../sass/_modules.scss */
 .confirm textarea {
   background: transparent;
   border: none;
@@ -205,13 +269,13 @@ p {
 }
 
 @keyframes pulse {
-  /* line 100, ../sass/_modules.scss */
+  /* line 158, ../sass/_modules.scss */
   from {
     -webkit-box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.7);
             box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.7);
   }
 
-  /* line 102, ../sass/_modules.scss */
+  /* line 160, ../sass/_modules.scss */
   to {
     -webkit-box-shadow: 0 0 30px 10px rgba(215, 215, 215, 0.2);
             box-shadow: 0 0 30px 10px rgba(215, 215, 215, 0.2);
@@ -219,13 +283,13 @@ p {
 }
 
 @-webkit-keyframes pulse {
-  /* line 106, ../sass/_modules.scss */
+  /* line 164, ../sass/_modules.scss */
   from {
     -webkit-box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.7);
             box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.7);
   }
 
-  /* line 108, ../sass/_modules.scss */
+  /* line 166, ../sass/_modules.scss */
   to {
     -webkit-box-shadow: 0 0 30px 10px rgba(215, 215, 215, 0.2);
             box-shadow: 0 0 30px 10px rgba(215, 215, 215, 0.2);
@@ -249,6 +313,17 @@ p {
   position: fixed;
 }
 
+/* line 2, ../sass/_state.scss */
+.primary_content .btn.submit {
+  position: static;
+}
+
 /* Small **********************************************************/
+@media screen and (min-width: 768px) {
+  /* line 7, ../sass/_state.scss */
+  .primary_content .btn.submit {
+    position: absolute;
+  }
+}
 /* Medium *********************************************************/
 /* Large **********************************************************/

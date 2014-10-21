@@ -43,9 +43,18 @@
   animation: pulse 2s infinite alternate;
   background: url('../img/egg_shell.png') top left repeat;
   margin-bottom: 21.6rem;
+  min-height: 66rem;
   overflow: hidden;
   padding-bottom: 2rem;
-  .btn {
+  .calender-wrap {
+    span {
+      display: table-cell;
+    }
+    &+.btn {
+      min-width: 107px;
+    }
+  }
+  .btn.submit {
     bottom: 0;
     font-weight: bold;
     margin-bottom: 1em;
@@ -53,9 +62,58 @@
     right: 15px;
   }
   .section {
-    min-height: 21rem;
+    min-height: 30rem;
     position: relative;
     padding-bottom: 65px;
+    p {
+      margin: 0;
+    }
+  }
+  span {
+    display: block;
+  }
+  .task-date {
+    color: teal;
+    text-align: left;
+  }
+  .check-box {
+    border-radius: 50%;
+    border: 2px solid black;
+    display: inline-block;
+    height: 20px;
+    margin: 5px;
+    padding: 0;
+    position: absolute;
+    transition: all ease-in-out 0.2s;
+    width: 20px;
+    &:hover {
+      border-color: red;
+    }
+    i {
+      color: red;
+      font-size: 1.5em;
+      opacity: 0;
+      top: -1rem;
+      transition: opacity ease-in-out 0.2s;
+    }
+  }
+  .check-box.checked {
+    i {
+      opacity: 1;
+    }
+  }
+  .update {
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      p {
+        font-size: 2.1rem;
+        padding-left: 35px;
+        padding-top: 1px;
+      }
+    }
   }
 }
 
