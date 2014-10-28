@@ -19,31 +19,11 @@
       echo $status;
     }
     catch (PDOException $e) {
-      $status = 'Error adding item';
+      $status = '<span class="alert-danger">Error adding item</span>';
       echo $status;
       echo $e;
     }
   }
-
-
-
-  if (isset($_POST['delete'])) {
-    try {
-      $sql = 'DELETE FROM ratings WHERE id = :id';
-      $s =$pdo->prepare($sql);
-      $s->bindValue(':id', $_POST['id']);
-      $s->execute();
-    }
-    catch (PDOException $e) {   
-      $status = 'Error deleting';
-    }
-  }
-
-
-
-
-
-
 
   try {
 
@@ -60,7 +40,7 @@
     }
   }
   catch (PDOException $e) {
-    $status = 'Error fetching items';
+    $status = '<span class="alert-danger">Error fetching items</span>';
   }
 
 ?>

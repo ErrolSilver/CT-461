@@ -13,7 +13,7 @@
       
       $.ajax({
         type:"post",
-        url:"incls/process.php",
+        url:"incls/controller.php",
         data:"item="+item+"&rating="+rating,
         success:function(){
           $('#item').val('');
@@ -27,7 +27,7 @@
 
     $.ajax({
       type:"post",
-      url:"incls/process.php",
+      url:"incls/controller.php",
       data:"delete="+del,
       success:function(){
         $("#primaryContent").load("index.php #itemContainer");
