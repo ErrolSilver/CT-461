@@ -1,0 +1,15 @@
+// Breakpoints
+$break-small: 768px;
+$break-medium: 992px;
+$break-large: 1200px;
+
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,600,700,300);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,400);
+
+// Imports
+@import "base"; // Defaults
+@import "modules"; // Structure of blocks
+@import "layout"; // Where the blocks are placed
+@import "state"; // What the blocks look like in different states
