@@ -15,8 +15,6 @@
           rating = '". $rating ."'";
       $s = $pdo->prepare($sql);
       $s->execute();
-      $status = 'yep';
-      echo $status;
     }
     catch (PDOException $e) {
       $status = '<span class="alert-danger">Error adding item</span>';
