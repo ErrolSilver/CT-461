@@ -1,0 +1,267 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,600,700,300);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,400);
+/* line 4, ../sass/_base.scss */
+html,
+body {
+  font-family: "Open sans", sans-serif;
+  height: 100%;
+}
+
+/* line 9, ../sass/_base.scss */
+html {
+  font-size: 1em;
+  font-size: 43.75%;
+}
+@media (min-width: 768px) {
+  /* line 9, ../sass/_base.scss */
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 9, ../sass/_base.scss */
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 9, ../sass/_base.scss */
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* line 28, ../sass/_base.scss */
+body {
+  font-size: 1.8em;
+}
+
+/* line 32, ../sass/_base.scss */
+h1 {
+  font-size: 3.6rem;
+}
+
+/* line 36, ../sass/_base.scss */
+h2 {
+  font-size: 3.2rem;
+}
+
+/* line 40, ../sass/_base.scss */
+h3 {
+  font-size: 3rem;
+}
+
+/* line 44, ../sass/_base.scss */
+h4 {
+  font-size: 2.4rem;
+}
+
+/* line 48, ../sass/_base.scss */
+h5 {
+  font-size: 2rem;
+}
+
+/* line 52, ../sass/_base.scss */
+h6 {
+  font-size: 1.8rem;
+}
+
+/* line 61, ../sass/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open sans", sans-serif;
+  font-weight: 200;
+}
+
+/* line 66, ../sass/_base.scss */
+p {
+  font-family: "Open sans", sans-serif;
+  line-height: 1.5em;
+}
+
+/* line 71, ../sass/_base.scss */
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* line 75, ../sass/_base.scss */
+.main-wrapper {
+  height: 100%;
+}
+
+/* line 79, ../sass/_base.scss */
+.fixed {
+  position: fixed !important;
+  top: 0;
+  z-index: 9999;
+}
+
+/* line 2, ../sass/_modules.scss */
+.primary--carousel {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+}
+/* line 10, ../sass/_modules.scss */
+.primary--carousel .carousel-inner {
+  height: 100%;
+}
+/* line 13, ../sass/_modules.scss */
+.primary--carousel .carousel-inner .item {
+  height: 100%;
+}
+/* line 16, ../sass/_modules.scss */
+.primary--carousel .carousel-inner .item img {
+  height: 100%;
+  max-width: initial;
+  width: auto;
+}
+
+/* line 25, ../sass/_modules.scss */
+.carousel--overlay {
+  background: rgba(54, 57, 66, 0.5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+/* line 32, ../sass/_modules.scss */
+.carousel--overlay h1 {
+  color: white;
+  font-size: 6.4rem;
+  text-shadow: 0px 0px 15px #000;
+}
+
+/* line 39, ../sass/_modules.scss */
+.carousel--overlay_text {
+  margin: auto;
+}
+
+/* line 43, ../sass/_modules.scss */
+.carousel--overlay_nav {
+  bottom: 0;
+  height: 5rem;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+/* line 51, ../sass/_modules.scss */
+.carousel--overlay_nav ul {
+  background: rgba(54, 57, 66, 0.5);
+  display: table;
+  height: 100%;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 0;
+  -webkit-transition: background ease-in-out 500ms;
+          transition: background ease-in-out 500ms;
+  width: 100%;
+}
+/* line 61, ../sass/_modules.scss */
+.carousel--overlay_nav ul li {
+  display: table-cell;
+  vertical-align: middle;
+  width: 4%;
+}
+/* line 66, ../sass/_modules.scss */
+.carousel--overlay_nav ul li a {
+  color: white;
+  font-family: oswald;
+  text-decoration: none;
+}
+
+/* line 77, ../sass/_modules.scss */
+.carousel--overlay_nav.fixed ul {
+  background: rgba(54, 57, 66, 0.8);
+  border-bottom: 2px solid #d8caa8;
+}
+
+/* line 84, ../sass/_modules.scss */
+.content-section {
+  background: url("../img/retina_wood.png") top left repeat;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 92, ../sass/_modules.scss */
+.content-section_overlay {
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.28)));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.28) 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 12+ */
+  /* IE10+ */
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.28) 100%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.28) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#47000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 105, ../sass/_modules.scss */
+.listing-item_contain {
+  -webkit-box-shadow: 0 0 5px 1px #000;
+          box-shadow: 0 0 5px 1px #000;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 114, ../sass/_modules.scss */
+.listing-item_image img {
+  width: 100%;
+}
+
+/* line 119, ../sass/_modules.scss */
+.listing-item_content {
+  background: url("../img/green_cup.png") top left repeat;
+  color: #363942;
+  height: 100%;
+  min-height: 22rem;
+  padding: 5%;
+  width: 100%;
+}
+
+/* line 128, ../sass/_modules.scss */
+.listing-item_contact {
+  bottom: 10%;
+  color: #363942;
+  position: absolute;
+  right: 10%;
+}
+
+/* Small **********************************************************/
+/* Medium *********************************************************/
+@media screen and (min-width: 992px) {
+  /* line 10, ../sass/_state.scss */
+  .listing-item_contain {
+    height: 48rem;
+  }
+}
+/* Large **********************************************************/
+@media screen and (min-width: 1100px) {
+  /* line 23, ../sass/_state.scss */
+  .primary--carousel .carousel-inner .item img {
+    height: auto;
+    max-width: 100%;
+    width: 100% !important;
+  }
+}

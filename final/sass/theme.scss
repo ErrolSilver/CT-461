@@ -1,0 +1,21 @@
+// Breakpoints
+$break-small: 768px;
+$break-medium: 992px;
+$break-large: 1100px;
+
+// Color variables
+$dark-blue: #363942;
+$brown: #382513;
+$dark-green: #284907;
+$green: #5c832f;
+$tan: #d8caa8;
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,600,700,300);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,400);
+
+// Imports
+@import "base"; // Defaults
+@import "modules"; // Structure of blocks
+@import "layout"; // Where the blocks are placed
+@import "state"; // What the blocks look like in different states

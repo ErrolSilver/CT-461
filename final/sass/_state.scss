@@ -1,0 +1,31 @@
+//State styles
+
+/* Small **********************************************************/
+@media screen and (min-width: $break-small) {
+
+}
+
+/* Medium *********************************************************/
+@media screen and (min-width: $break-medium) {
+  .listing-item_contain {
+    height: 48rem;
+  }
+}
+
+/* Large **********************************************************/
+@media screen and (min-width: $break-large) {
+  .primary--carousel {
+
+    .carousel-inner {
+
+      .item {
+        
+        img {
+          height: auto;
+          max-width: 100%;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
