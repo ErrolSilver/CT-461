@@ -1,10 +1,9 @@
 <?php
 try {
   // local credentials
-  $pdo = new PDO('mysql:host=localhost;dbname=erroljokes', 'errol', 'test');
+  $pdo = new PDO('mysql:host=localhost;dbname=finale', 'errol', 'test');
 
-  // studentweb credentials 
-  //$pdo = new PDO('mysql:host=localhost;dbname=silvere', 'silvere', 'test');
+
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $pdo->exec('SET NAMES "utf8"');
 

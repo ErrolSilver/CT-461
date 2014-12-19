@@ -109,6 +109,34 @@ a {
   position: fixed;
   width: 100%;
   z-index: 0;
+  /*
+
+  THAT IS AMAZING
+
+  .item:nth-child(1) {
+    background: url('../img/bridge-czech-republic-iron-3489.jpg') top center no-repeat;
+    background-size: cover;
+  }
+
+  .item:nth-child(2) {
+    background: url('../img/building-fire-escape-3530.jpg') top center no-repeat;
+    background-size: cover;
+  }
+
+  .item:nth-child(3) {
+    background: url('../img/city-skyline-skyscrapers-2773.jpg') top center no-repeat;
+    background-size: cover;
+  }
+
+  .item:nth-child(4) {
+    background: url('../img/jetty-night-3519.jpg') top center no-repeat;
+    background-size: cover;
+  }
+
+  .item:nth-child(5) {
+    background: url('../img/fabric-industry-3503.jpg') top center no-repeat;
+    background-size: cover;
+  }*/
 }
 /* line 10, ../sass/_modules.scss */
 .primary--carousel .carousel-inner {
@@ -124,10 +152,35 @@ a {
   max-width: initial;
   width: auto;
 }
+/* line 27, ../sass/_modules.scss */
+.primary--carousel .item:nth-child(1) {
+  background: url("../img/background1.jpg");
+  background-size: cover;
+}
+/* line 27, ../sass/_modules.scss */
+.primary--carousel .item:nth-child(2) {
+  background: url("../img/background2.jpg");
+  background-size: cover;
+}
+/* line 27, ../sass/_modules.scss */
+.primary--carousel .item:nth-child(3) {
+  background: url("../img/background3.jpg");
+  background-size: cover;
+}
+/* line 27, ../sass/_modules.scss */
+.primary--carousel .item:nth-child(4) {
+  background: url("../img/background4.jpg");
+  background-size: cover;
+}
+/* line 27, ../sass/_modules.scss */
+.primary--carousel .item:nth-child(5) {
+  background: url("../img/background5.jpg");
+  background-size: cover;
+}
 
-/* line 25, ../sass/_modules.scss */
+/* line 63, ../sass/_modules.scss */
 .carousel--overlay {
-  background: rgba(54, 57, 66, 0.5);
+  background: rgba(54, 57, 66, 0.7);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,19 +189,19 @@ a {
   position: relative;
   z-index: 0;
 }
-/* line 32, ../sass/_modules.scss */
+/* line 70, ../sass/_modules.scss */
 .carousel--overlay h1 {
   color: white;
   font-size: 6.4rem;
   text-shadow: 0px 0px 15px #000;
 }
 
-/* line 39, ../sass/_modules.scss */
+/* line 77, ../sass/_modules.scss */
 .carousel--overlay_text {
   margin: auto;
 }
 
-/* line 43, ../sass/_modules.scss */
+/* line 81, ../sass/_modules.scss */
 .carousel--overlay_nav {
   bottom: 0;
   height: 5rem;
@@ -157,7 +210,7 @@ a {
   text-align: center;
   width: 100%;
 }
-/* line 51, ../sass/_modules.scss */
+/* line 89, ../sass/_modules.scss */
 .carousel--overlay_nav ul {
   background: rgba(54, 57, 66, 0.5);
   display: table;
@@ -169,26 +222,25 @@ a {
           transition: background ease-in-out 500ms;
   width: 100%;
 }
-/* line 61, ../sass/_modules.scss */
+/* line 99, ../sass/_modules.scss */
 .carousel--overlay_nav ul li {
   display: table-cell;
   vertical-align: middle;
   width: 4%;
 }
-/* line 66, ../sass/_modules.scss */
+/* line 104, ../sass/_modules.scss */
 .carousel--overlay_nav ul li a {
   color: white;
-  font-family: oswald;
   text-decoration: none;
 }
 
-/* line 77, ../sass/_modules.scss */
+/* line 114, ../sass/_modules.scss */
 .carousel--overlay_nav.fixed ul {
   background: rgba(54, 57, 66, 0.8);
   border-bottom: 2px solid #d8caa8;
 }
 
-/* line 84, ../sass/_modules.scss */
+/* line 121, ../sass/_modules.scss */
 .content-section {
   background: url("../img/retina_wood.png") top left repeat;
   min-height: 100%;
@@ -197,7 +249,7 @@ a {
   z-index: 1;
 }
 
-/* line 92, ../sass/_modules.scss */
+/* line 129, ../sass/_modules.scss */
 .content-section_overlay {
   /* FF3.6+ */
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.28)));
@@ -216,7 +268,7 @@ a {
   width: 100%;
 }
 
-/* line 105, ../sass/_modules.scss */
+/* line 142, ../sass/_modules.scss */
 .listing-item_contain {
   -webkit-box-shadow: 0 0 5px 1px #000;
           box-shadow: 0 0 5px 1px #000;
@@ -225,12 +277,12 @@ a {
   width: 100%;
 }
 
-/* line 114, ../sass/_modules.scss */
+/* line 151, ../sass/_modules.scss */
 .listing-item_image img {
   width: 100%;
 }
 
-/* line 119, ../sass/_modules.scss */
+/* line 156, ../sass/_modules.scss */
 .listing-item_content {
   background: url("../img/green_cup.png") top left repeat;
   color: #363942;
@@ -240,7 +292,7 @@ a {
   width: 100%;
 }
 
-/* line 128, ../sass/_modules.scss */
+/* line 165, ../sass/_modules.scss */
 .listing-item_contact {
   bottom: 10%;
   color: #363942;
@@ -257,7 +309,7 @@ a {
   }
 }
 /* Large **********************************************************/
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   /* line 23, ../sass/_state.scss */
   .primary--carousel .carousel-inner .item img {
     height: auto;

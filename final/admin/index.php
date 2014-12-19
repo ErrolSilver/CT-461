@@ -9,8 +9,8 @@
 
   <h1>Listing Management System</h1>
   <ul>
-    <li><a href="jokes/">Manage Listings</a></li>
-    <li><a href="authors/">Manage Sellers</a></li>
+    <li><a href="computers/">Manage Listings</a></li>
+    <li><a href="sellers/">Manage Sellers</a></li>
     <li><a href="categories/">Manage Computer Brands</a></li>
   </ul>
 

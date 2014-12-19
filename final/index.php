@@ -7,26 +7,26 @@ include_once ROOT . '/incls/magicquotes.inc.php';
 include ROOT . '/incls/db.inc.php';
 
 try {
-  $sql = 'SELECT joke.id, joketext, name, email
-      FROM joke INNER JOIN author
-        ON authorid = author.id';
+  $sql = 'SELECT computer.id, details, name, email
+      FROM computer INNER JOIN seller
+        ON sellerid = seller.id';
   $result = $pdo->query($sql);
 }
 
 catch (PDOException $e) {
-  $error = 'Error fetching jokes: ' . $e->getMessage();
+  $error = 'Error fetching computers: ' . $e->getMessage();
   include 'error.html.php';
   exit();
 }
 
 foreach ($result as $row) {
-  $jokes[] = array(
+  $computers[] = array(
     'id' => $row['id'],
-    'text' => $row['joketext'],
+    'text' => $row['details'],
     'name' => $row['name'],
     'email' => $row['email']
   );
 }
 
-include 'jokes.html.php';
+include 'default.html.php';
 

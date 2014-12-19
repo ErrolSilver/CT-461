@@ -11,11 +11,11 @@ include_once ROOT .
 
 if (isset($_GET['add']))
 {
-  $pageTitle = 'New Category';
+  $pageTitle = 'New type';
   $action = 'addform';
   $name = '';
   $id = '';
-  $button = 'Add category';
+  $button = 'Add type';
 
   include 'form.html.php';
   exit();
@@ -27,7 +27,7 @@ if (isset($_GET['addform']))
 
   try
   {
-    $sql = 'INSERT INTO category SET
+    $sql = 'INSERT INTO type SET
         name = :name';
     $s = $pdo->prepare($sql);
     $s->bindValue(':name', $_POST['name']);
@@ -35,7 +35,7 @@ if (isset($_GET['addform']))
   }
   catch (PDOException $e)
   {
-    $error = 'Error adding submitted category.';
+    $error = 'Error adding submitted type.';
     include 'error.html.php';
     exit();
   }
@@ -50,25 +50,25 @@ if (isset($_POST['action']) and $_POST['action'] == 'Edit')
 
   try
   {
-    $sql = 'SELECT id, name FROM category WHERE id = :id';
+    $sql = 'SELECT id, name FROM type WHERE id = :id';
     $s = $pdo->prepare($sql);
     $s->bindValue(':id', $_POST['id']);
     $s->execute();
   }
   catch (PDOException $e)
   {
-    $error = 'Error fetching category details.';
+    $error = 'Error fetching type details.';
     include 'error.html.php';
     exit();
   }
 
   $row = $s->fetch();
 
-  $pageTitle = 'Edit Category';
+  $pageTitle = 'Edit type';
   $action = 'editform';
   $name = $row['name'];
   $id = $row['id'];
-  $button = 'Update category';
+  $button = 'Update type';
 
   include 'form.html.php';
   exit();
@@ -80,7 +80,7 @@ if (isset($_GET['editform']))
 
   try
   {
-    $sql = 'UPDATE category SET
+    $sql = 'UPDATE type SET
         name = :name
         WHERE id = :id';
     $s = $pdo->prepare($sql);
@@ -90,7 +90,7 @@ if (isset($_GET['editform']))
   }
   catch (PDOException $e)
   {
-    $error = 'Error updating submitted category.';
+    $error = 'Error updating submitted type.';
     include 'error.html.php';
     exit();
   }
@@ -103,32 +103,32 @@ if (isset($_POST['action']) and $_POST['action'] == 'Delete')
 {
   include ROOT . '../../../incls/db.inc.php';
 
-  // Delete joke associations with this category
+  // Delete computer associations with this type
   try
   {
-    $sql = 'DELETE FROM jokecategory WHERE categoryid = :id';
+    $sql = 'DELETE FROM computertype WHERE typeid = :id';
     $s = $pdo->prepare($sql);
     $s->bindValue(':id', $_POST['id']);
     $s->execute();
   }
   catch (PDOException $e)
   {
-    $error = 'Error removing jokes from category.';
+    $error = 'Error removing computers from type.';
     include 'error.html.php';
     exit();
   }
 
-  // Delete the category
+  // Delete the type
   try
   {
-    $sql = 'DELETE FROM category WHERE id = :id';
+    $sql = 'DELETE FROM type WHERE id = :id';
     $s = $pdo->prepare($sql);
     $s->bindValue(':id', $_POST['id']);
     $s->execute();
   }
   catch (PDOException $e)
   {
-    $error = 'Error deleting category.';
+    $error = 'Error deleting type.';
     include 'error.html.php';
     exit();
   }
@@ -137,12 +137,12 @@ if (isset($_POST['action']) and $_POST['action'] == 'Delete')
   exit();
 }
 
-// Display category list
+// Display type list
 include ROOT . '../../../incls/db.inc.php';
 
 try
 {
-  $result = $pdo->query('SELECT id, name FROM category');
+  $result = $pdo->query('SELECT id, name FROM type');
 }
 catch (PDOException $e)
 {

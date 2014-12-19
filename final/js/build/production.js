@@ -247,44 +247,6 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     }
     else $navBar.removeClass('fixed');
   });
-
-
-
-
-  $("#primarySubmit").click(function(e){
-      var item=$("#item").val();
-      var rating=$("#rating").val();
-
-      console.log(item);
-      console.log(rating);
-
-      e.preventDefault();
-      
-      $.ajax({
-        type:"post",
-        url:"incls/process.php",
-        data:"item="+item+"&rating="+rating,
-        success:function(){
-          $('#item').val('');
-          $("#primaryContent").load("index.php #itemContainer");
-        }
-      });
-    });
-
-  $('#search').click(function(e) {
-    e.preventDefault();
-
-    $.ajax({
-      type:"get",
-      url:"index.php",
-      data:"search="+search,
-      success:function(){
-        $("#mainWrapper").load("jokes.html.php .results");
-      }
-    });
-  });
-
-
 })(jQuery);
 
 /*!

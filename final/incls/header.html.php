@@ -1,3 +1,8 @@
+<?
+if (!defined('ROOT')) {
+  define('ROOT', dirname(__FILE__));
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +12,7 @@
     <title><? echo $pageTitle ?></title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/theme.css" rel="stylesheet">
     <link href="/css/shame.css" rel="stylesheet">
 

@@ -10,13 +10,13 @@
 <h1><?php htmlout($pageTitle); ?></h1>
 <p><a href="?add">Add new brand</a></p>
 <ul>
-  <?php foreach ($categories as $category): ?>
+  <?php foreach ($categories as $type): ?>
     <li>
       <form action="" method="post">
         <div>
-          <?php htmlout($category['name']); ?>
+          <?php htmlout($type['name']); ?>
           <input type="hidden" name="id" value="<?php
-              echo $category['id']; ?>">
+              echo $type['id']; ?>">
           <input type="submit" name="action" value="Edit">
           <input type="submit" name="action" value="Delete">
         </div>
